@@ -2,7 +2,7 @@
 #SoftDev1 pd 6
 #K06 -- StI/O: Divine your Destiny!
 #2018-09-13
-
+ 
 import csv
 import random
 
