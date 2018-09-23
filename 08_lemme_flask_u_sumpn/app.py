@@ -32,6 +32,6 @@ def puns(): #testing out lists
 def animal(): #testing out images
     return("This is a picture of a cute kitten! <br> <br><img height =\"600\" width = \"800\" src=\"http://tabify.io/wp-content/uploads/2016/08/image27-1170x757.jpg\"> ")
 
-if __name__ == " __main__": #will only run if it recognizes this a main (not outside source)   
+if __name__ == "__main__": #will only run if it recognizes this a main (not outside source)   
     app.debug = True
     app.run()

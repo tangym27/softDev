@@ -1,3 +1,8 @@
+#Michelle Tang
+#SoftDev1 pd6
+#K08: Fill Yer Flask
+#2018-09-19
+
 from flask import Flask
 
 app = Flask (__name__) #create instance of class FLask
@@ -6,7 +11,7 @@ app = Flask (__name__) #create instance of class FLask
 def hello_world():
     print("about to print __naame__ ...") # print out whenever you refresh
     print(__name__) #where will this go? #this will print out main
-    return "no hablo queso! check out my other routes (/intro, /puns, /animal)"
+    return("no hablo queso! check out my other routes (/intro, /puns, /animal)")
 
 @app.route("/intro")
 def intro():
@@ -27,6 +32,6 @@ def puns(): #testing out lists
 def animal(): #testing out images
     return("This is a picture of a cute kitten! <br> <br><img height =\"600\" width = \"800\" src=\"http://tabify.io/wp-content/uploads/2016/08/image27-1170x757.jpg\"> ")
 
-if __name__ == " __main__": #will only run if it recognizes this a main (not outside source)   
+if __name__ == "__main__": #will only run if it recognizes this a main (not outside source)   
     app.debug = True
     app.run()
