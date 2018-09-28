@@ -23,7 +23,9 @@ def autheicate():
     print(app)
     print(request)
     print(request.args)
-    return("hello")
+    return render_template('home.html',
+                           title = "hi",)
+
 
 if __name__ == "__main__": #will only run if it recognizes this a main (not outside source)   
     app.debug = True
