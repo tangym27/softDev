@@ -1,0 +1,88 @@
+<!--
+Aaron-gu-tang: Xiaojie(Aaron) Li & Michelle Tang
+SoftDev1 pd6
+K10 -- Jinja Tuning
+2018-09-23
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> {{ name }} </title>
+    <style>
+    * {
+        font-family: sans-serif;
+    }
+    a {
+        text-decoration: none;
+        color: blue;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    th, td {
+        border: 1px solid black;
+        text-align: left;
+        padding: 6px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 60%;
+    }
+
+    input[type=submit] {
+        width: 10%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-color: #d3dae5;
+        border: none;
+        cursor: pointer;
+    }
+
+    table.center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .light-gray {
+        background-color: #dee5ef;
+    }
+    </style>
+
+</head>
+<body>
+    <h1 class = "center"> Occupational Data in the United States</h1>
+    <p class = "center">
+        <br>
+        Random Occupation: <b>{{ occu }}</b>
+    </p>
+    <table class = "center">
+        <tr class = "light-gray">
+            <th>Occupation</th>
+            <th>Percentage</th>
+            <th>Link to Occupation Info</th>
+        </tr>
+
+        {% for job in occuList %}
+        <tr>
+            <td> {{ job }} </td>
+            <td> {{ dict[job][0] }}% </td>
+            <td> <a href= "{{ dict[job][1] }}" target="_blank"> Learn more </a> </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    <br>
+    <form action="/">
+        <center> <input type="submit" value="Return Home"></center>
+    </form>
+</body>
+
+</html>
