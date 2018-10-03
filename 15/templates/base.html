@@ -1,12 +1,24 @@
+<!-- 
+#I've Had Ahnaf, I'm Tangry: Michelle Tang, Ahnaf Kazi
+#SoftDev1 pd6
+#K15: Oh yes, perhaps I do…  
+#2018-10-03
+ -->
+
+<!-- Basis for inheritance -->
 <!DOCTYPE html>
-<html>
-<head>
-    <title> {% block title%} {% endblock %} </title>
-</head>
-<body>
-  {% block body %}
-        
-  {% endblock %}
-	
-</body>
-</html>
+    <html>
+        <head>
+            <title> {% block title %} {% endblock %}
+            </title>
+        </head>
+        <body>
+            <center>
+            {% block content %} 
+            {% endblock %} 
+            <br> <br> <br>
+            <!-- Establishes copyright symbol as basis: will always show up -->
+            &copy; Copyright 2018 by Michelle Tang & Ahnaf Kazi 
+            </center>
+        </body>
+    </html>

@@ -1,9 +1,9 @@
 #I've Had Ahnaf, I'm Tangry: Michelle Tang, Ahnaf Kazi
 #SoftDev1 pd6
-#K#14 -- Do I Know You?    
-#2018-10-02
+#K15: Oh yes, perhaps I do…  
+#2018-10-03
 
-from flask import Flask, render_template, request, session, url_for, redirect
+from flask import Flask, render_template, request, session, url_for, redirect, flash
 import os
 app = Flask (__name__) #create instance of class FLask
 app.secret_key = os.urandom(32) 
@@ -31,20 +31,22 @@ def login():
     session['username'] = request.form['username'] 
     print("YOU SHOULD ONLY SEE THIS IS USER AND PASS IS CORRECT")
     return render_template("user.html", username = USER)
-  # if it is not, return appropriate error
+  # if it is not, set flash to appropriate message.
   elif request.form['username'] != USER:
-    return render_template('error.html',error = "username")
+    flash("Your username is incorrect!")
   else:
-    return render_template('error.html',error = "password")
+    flash("Your password is incorrect!")
+  return render_template("/home.html")
+
 
 # logout page
 @app.route("/logout", methods=["POST"])
 def logout():
     #if button is pressed to logout...
     if(request.form["logout"] == "logout"):
-        #remove session and go back to login page
+        #remove session and go back to login 
         session.pop("username", None) 
-        return render_template("home.html")
+        return redirect(url_for("intro"))
 
 
 if __name__ == "__main__": #will only run if it recognizes this a main (not outside source)   
