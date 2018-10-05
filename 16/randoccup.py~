@@ -1,0 +1,25 @@
+
+# to access csv.reader() to read csv files
+import csv
+
+
+
+# with statement means less errors(automatically closes file)
+with open("data/occupations.csv","r") as csvF:
+    csvR = csv.Dictreader(csvF) # reads the csv file
+    # iterate through the csv file
+    for line in csvR:
+        print( row);
+
+# # sqlite3 foo.db # to open or create db file foo.db
+
+# a python script for interacting with an sqlite db:
+
+# import sqlite3
+
+# db = sqlite3.connect("food")
+# c = db.cursor()
+# c.execute*" CREATE TABLE roster(name TEXT, userid INTEGER)")
+
+# db.commit()
+# db.close()
