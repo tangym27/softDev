@@ -1,4 +1,4 @@
-#to be decided-Michelle Tang && Britni Canale
+#TangyCannoli-Michelle Tang && Britni Canale
 #SoftDev1 pd 6
 #K17: Average
 #10/7/18
