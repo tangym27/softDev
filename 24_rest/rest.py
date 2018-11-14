@@ -14,10 +14,8 @@ def welcome():
     data = lnk.read()
     nasa = json.loads(data) #creates a dictionary
     pic = nasa["url"]
-    return render_template("temp.html", pic)
+    return render_template("home.html", pic = pic)
 
 if __name__ == "__main__":
     app.debug = True
     app.run()
-
-    
