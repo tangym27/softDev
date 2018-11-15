@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Yelp Query! </title>
+    </head>
+
+    <body>
+      <p><a href="/">Home Sweet Home</a></p>
+
+      <p> Phone Number Search Query: 17189966288 </p>
+        <ul>
+          <li> Name: {{ business['businesses'][0]['name'] }} </li>
+          <li> URL:  {{ business['businesses'][0]['url'] }}  </li>
+          <li> Rating: {{ business['businesses'][0]['rating'] }} </li>
+          <li> Price: {{ business['businesses'][0]['price'] }} </li>
+        </ul>
+    </body>
+</html>
