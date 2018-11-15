@@ -1,3 +1,8 @@
+# Michelle Tang
+# SoftDev1 pd6
+# K25 -- Getting More Rest
+# 2018-11-14
+
 from flask import Flask, render_template
 from yelpapi import YelpAPI
 
