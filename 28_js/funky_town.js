@@ -8,7 +8,7 @@ var fibonacci = function(n){
     return 1;
   }
   else{
-    return fib(n - 1) + fib(n - 2);
+    return fibonacci(n - 1) + fibonacci(n - 2);
   }
 }
 
