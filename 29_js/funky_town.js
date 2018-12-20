@@ -22,12 +22,12 @@ var fibb = function(n){
 var gcd = function (a,b) {
     // this means the previous modulo was 0, so a divided into b
     if (b == 0) {
-	     return a
+	return a;
     }
     // finds the smallest interval between the two numbers,
     // if that interval fully divides into b, that is the gcd
     else {
-	     return gcd(b, a % b)
+	return gcd(b, a % b);
     }
 };
 
@@ -43,20 +43,38 @@ var randstu = function(){
 // If the event is 'clicked,' follow this fib function
 var jFib = document.getElementById("fib");
 jFib.addEventListener("click", function() {
-  console.log("Finds the nth number in the fib sequence, fibb(5):")
-  console.log(fibb(8))
+    console.log("Finds the nth number in the fib sequence, fibb(5):");
+    var ans = fibb(5);
+    console.log(ans);
+    var para = document.createElement("h4");
+    var node = document.createTextNode("fibb(5)= " + ans);
+    para.appendChild(node);
+    var element = document.getElementById("ans");
+    element.appendChild(para);
 });
 
 // If the event is 'clicked,' follow this GCD function
 var jGcd = document.getElementById("gcd");
 jGcd.addEventListener("click", function() {
-  console.log("Finds the GCD, gcd(120, 75):")
-  console.log(gcd(96, 30))
+    console.log("Finds the GCD, gcd(120, 75):");
+    var ans = gcd(120,75);
+    console.log(ans);
+    var para = document.createElement("h4");
+    var node = document.createTextNode("gcd(120,75)= " + ans);
+    para.appendChild(node);
+    var element = document.getElementById("ans");
+    element.appendChild(para);
 });
 
 // If the event is 'clicked,' follow this random student function
 var jRandS = document.getElementById("rand");
 jRandS.addEventListener("click", function() {
-  console.log("Gets a random student, randstu():")
-  console.log(randstu())
+    console.log("Gets a random student, randstu():");
+    var ans = randstu();
+    console.log(ans);
+    var para = document.createElement("h4");
+    var node = document.createTextNode("randstu()= " + ans);
+    para.appendChild(node);
+    var element = document.getElementById("ans");
+    element.appendChild(para);
 });
