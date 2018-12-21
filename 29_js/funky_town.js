@@ -78,3 +78,6 @@ jRandS.addEventListener("click", function() {
     var element = document.getElementById("ans");
     element.appendChild(para);
 });
+
+var button = document.getElementById("b");
+button.addEventListener("mouseover", function(e) {console.log(e)} )
