@@ -1,8 +1,8 @@
 //ENDGAME
 //T Fabiha, Michelle Tang
 //SoftDev1 pd6
-//K30
-//2018-12-20
+//K30 -- Sequential Progression III: Season of the Witch
+//2018-12-21
 
 var changeHeading = function(e) {
     var h = document.getElementById("h");
@@ -47,7 +47,7 @@ var addFib = function(e)
 {
     var list = document.getElementById("fiblist");
     var item = document.createElement("li");
-    
+
     item.innerHTML = f1;
     list.appendChild( item );
     console.log("addFib");
